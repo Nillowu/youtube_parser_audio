@@ -19,20 +19,16 @@ def trim_random_30s(file_path: str):
         os.remove(file_path)
         return
 
+    start_time = random.uniform(0, duration - 30) * 1000  # Перевод в миллисекунды
+    trimmed_audio = audio[start_time:start_time + 30 * 1000]
 
-    for i in range(n): # если хотим один видос порезать n раз по 30 секунд (надо закоменить предыдущие пять строк и добавить в функцию n)
-        start_time = random.uniform(0, duration - 30) * 1000  # Перевод в миллисекунды
-        trimmed_audio = audio[start_time:start_time + 30 * 1000]
-
-        output_path = file_path.replace('.wav', f'_trimmed_{i + 1}.wav')
-        trimmed_audio.export(output_path, format='wav')
-        print(f'Trimmed file saved: {output_path}')
-
+    trimmed_audio.export(output_path, format='wav')
     os.remove(file_path)
+    print(f'Trimmed file saved: {output_path}')
 
 def process_files_in_directory(directory_path: str):
     for file in os.listdir(directory_path):
-        file_path = os.path.join(directory_path, file)#
+        file_path = os.path.join(directory_path, file)
 
         if os.path.isfile(file_path) and file.lower().endswith('.wav'):
             print(f'Processing file: {file}')
