@@ -33,7 +33,7 @@ def find_and_remove_duplicates(directory_path):
         for file2 in files[i + 1:]:
             file1_path = os.path.join(directory_path, file1)
             file2_path = os.path.join(directory_path, file2)
-            if compare_audio_files(file1_path, file2_path):
+            if compare_audio_files(file1_path, file2_path):#
                 try:
                     os.remove(file2_path)
                     print(f"Удалён дублирующийся файл: {file2_path}")

@@ -25,7 +25,7 @@ def download_audio(playlist_url: str, output_path: str = '.'):
             ydl.download([playlist_url])
         print(f"Playlist has been successfully downloaded to {output_path}")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An error occurred: {e}")#
 
 
 video_url = "https://www.youtube.com/watch?v=TMmv29SloFw&list=PLNj9MGbh_4S_PU38V9wli-Mr28Vt8FtS1&ab_channel=MELOMANMUSIC" #сюда ссылку на плейлист

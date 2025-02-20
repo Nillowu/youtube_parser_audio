@@ -4,7 +4,7 @@ import shutil
 
 def merge_audio_folders(source_folder, target_folder):
     for file_name in os.listdir(source_folder):
-        source_file = os.path.join(source_folder, file_name)
+        source_file = os.path.join(source_folder, file_name)#
         target_file = os.path.join(target_folder, file_name)
 
         if os.path.isfile(source_file):

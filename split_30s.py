@@ -32,7 +32,7 @@ def trim_random_30s(file_path: str):
 
 def process_files_in_directory(directory_path: str):
     for file in os.listdir(directory_path):
-        file_path = os.path.join(directory_path, file)
+        file_path = os.path.join(directory_path, file)#
 
         if os.path.isfile(file_path) and file.lower().endswith('.wav'):
             print(f'Processing file: {file}')
