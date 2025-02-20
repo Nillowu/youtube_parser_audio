@@ -15,7 +15,6 @@ def compare_audio_files(file1, file2):
         if len(audio1) != len(audio2):
             print(f"Длины аудиофайлов не совпадают: {file1} ({len(audio1)} samples) и {file2} ({len(audio2)} samples)")
             return False
-
         if np.array_equal(audio1, audio2):
             print(f"Файлы одинаковые: {file1} и {file2}")
             return True
@@ -43,7 +42,7 @@ def find_and_remove_duplicates(directory_path):
 
 
 
-playlist_dir = "русский хайперпоп" # сюда путь к плейлисту где все песни
+playlist_dir = "BEST PHONK MIX PLAYLIST - Phonk Music 2025" # сюда путь к плейлисту где все песни
 
 find_and_remove_duplicates(playlist_dir)
 

@@ -28,5 +28,5 @@ def download_audio(playlist_url: str, output_path: str = '.'):
         print(f"An error occurred: {e}")
 
 
-video_url = "https://www.youtube.com/playlist?list=PLOJXgQYZE_G0W8HzEiPnhClZlQ8tzdxnQ" #сюда ссылку на плейлист
+video_url = "https://www.youtube.com/watch?v=TMmv29SloFw&list=PLNj9MGbh_4S_PU38V9wli-Mr28Vt8FtS1&ab_channel=MELOMANMUSIC" #сюда ссылку на плейлист
 download_audio(video_url)
